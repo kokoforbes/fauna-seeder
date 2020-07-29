@@ -1,0 +1,10 @@
+type Repo {
+  projectName: String! @unique
+  repoUrl: String! @unique
+  svgLogo: String
+  colorHex: String
+}
+
+type Query {
+  allRepos: [Repo!]!
+}
