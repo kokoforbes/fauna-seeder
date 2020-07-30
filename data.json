@@ -1,0 +1,67 @@
+[
+  {
+    "projectName": "Vue.js",
+    "repoUrl": "https://github.com/vuejs/vue",
+    "simpleIconsName": "Vue.js"
+  },
+  {
+    "projectName": "gulp",
+    "repoUrl": "https://github.com/gulpjs/gulp",
+    "simpleIconsName": "gulp"
+  },
+  {
+    "projectName": "Nuxt.js",
+    "repoUrl": "https://github.com/nuxt/nuxt.js",
+    "simpleIconsName": "Nuxt.js"
+  },
+  {
+    "projectName": "Strapi",
+    "repoUrl": "https://github.com/strapi/strapi",
+    "simpleIconsName": "Strapi"
+  },
+  {
+    "projectName": "npm",
+    "repoUrl": "https://github.com/npm/cli",
+    "simpleIconsName": "NPM"
+  },
+  {
+    "projectName": "Bulma",
+    "repoUrl": "https://github.com/jgthms/bulma",
+    "simpleIconsName": "Bulma"
+  },
+  {
+    "projectName": "Sass",
+    "repoUrl": "https://github.com/sass/sass",
+    "simpleIconsName": "Sass"
+  },
+  {
+    "projectName": "GraphQL",
+    "repoUrl": "https://github.com/graphql/graphql-spec",
+    "simpleIconsName": "GraphQL"
+  },
+  {
+    "projectName": "Prettier",
+    "repoUrl": "https://github.com/prettier/prettier",
+    "simpleIconsName": "Prettier"
+  },
+  {
+    "projectName": "Node.js",
+    "repoUrl": "https://github.com/nodejs/node",
+    "simpleIconsName": "Node.js"
+  },
+  {
+    "projectName": "Tailwind CSS",
+    "repoUrl": "https://github.com/tailwindcss/tailwindcss",
+    "simpleIconsName": "Tailwind CSS"
+  },
+  {
+    "projectName": "Vuetify",
+    "repoUrl": "https://github.com/vuetifyjs/vuetify",
+    "simpleIconsName": "Vuetify"
+  },
+  {
+    "projectName": "ESLint",
+    "repoUrl": "https://github.com/eslint/eslint",
+    "simpleIconsName": "ESLint"
+  }
+]
