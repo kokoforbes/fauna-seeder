@@ -1,65 +1,55 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        repo-catalogue
+  <section class="section">
+    <div class="container">
+      <h1
+        :style="{ marginBottom: '5rem' }"
+        class="title has-text-centered is-size-1"
+      >
+        Repo Catalogue
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+      <div class="columns is-multiline has-text-centered">
+        <div
+          v-for="repo in repos"
+          :key="repo.projectName"
+          class="card column is-3 mb-5"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+          <div
+            :style="{ backgroundColor: '#' + repo.colorHex }"
+            class="card-image"
+          >
+            <a :href="`/repos/${repo.slug}`">
+              <figure
+                :style="{ maxWidth: '20%', margin: '0 auto', padding: '2em 0' }"
+                v-html="repo.svgLogo"
+              ></figure>
+            </a>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <h3 class="title">{{ repo.projectName }}</h3>
+                <a class="subtitle" :href="repo.repoUrl" target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-export default {}
+export default {
+  asyncData({ payload }) {
+    return { repos: payload }
+  },
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.card {
+  margin: 1.5rem;
 }
 </style>
