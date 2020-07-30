@@ -14,7 +14,9 @@
     "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/bulma": "^1.3.0",
     "@nuxtjs/dotenv": "^1.4.1",
-    "nuxt": "^2.14.0"
+    "faunadb": "^2.14.2",
+    "nuxt": "^2.14.0",
+    "slugify": "^1.4.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

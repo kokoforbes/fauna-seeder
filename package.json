@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "faunadb": "^2.14.2",
     "simple-icons": "^3.3.0"
   }
 }

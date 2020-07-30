@@ -1,3 +1,4 @@
+require('dotenv').config()
 export default {
   /*
    ** Nuxt rendering mode
@@ -73,6 +74,48 @@ export default {
           customProperties: false,
         },
       },
+    },
+  },
+
+  generate: {
+    async routes() {
+      const faunadb = require('faunadb')
+      const query = faunadb.query
+      const slugify = require('slugify')
+      const q = query
+      if (!process.env.FAUNA_SERVER_KEY) {
+        throw new Error('FAUNA_SERVER_KEY not found.')
+      }
+      const client = new faunadb.Client({
+        secret: process.env.FAUNA_SERVER_KEY,
+      })
+      const result = await client.query(
+        q.Map(
+          q.Paginate(q.Match(q.Index('allRepos'))),
+          q.Lambda('X', q.Get(q.Var('X')))
+        )
+      )
+      const repos = result.data.map((repo) => repo.data)
+      const routes = repos.map((repo) => {
+        const repoUrlParts = repo.repoUrl.split('/')
+        const repoOwner = repoUrlParts[repoUrlParts.length - 2]
+        const repoName = repoUrlParts[repoUrlParts.length - 1]
+        const slug = slugify(repoName, {
+          remove: /[*+~.()'"!:@]/g,
+        })
+        repo.slug = slug
+        repo.owner = repoOwner
+        repo.name = repoName
+        return {
+          route: '/repos/' + slug,
+          payload: repo,
+        }
+      })
+      routes.push({
+        route: '/',
+        payload: repos,
+      })
+      return routes
     },
   },
 }
