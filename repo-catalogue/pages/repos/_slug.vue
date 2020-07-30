@@ -16,8 +16,12 @@
         </div>
       </div>
     </section>
-    <section class="detai">
-      <div v-if="!isLoading" class="container" :style="{ paddingTop: '2rem' }">
+    <section>
+      <div
+        v-if="!isLoading"
+        class="container"
+        :style="{ padding: '2rem', margin: '0 auto' }"
+      >
         <p>
           <span class="is-size-5">Description:</span> {{ repoData.description }}
         </p>
