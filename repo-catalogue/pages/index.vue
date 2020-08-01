@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <h1
-        :style="{ marginBottom: '5rem' }"
+        :style="{ marginBottom: '6rem' }"
         class="title has-text-centered is-size-1"
       >
         Repo Catalogue
