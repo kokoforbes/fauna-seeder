@@ -4,6 +4,7 @@
   "description": "A Repo Catalogue site with Nuxt.js and FaunaDB",
   "main": "index.js",
   "scripts": {
+    "build:repo-catalogue": "npm --prefix repo-catalogue run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
