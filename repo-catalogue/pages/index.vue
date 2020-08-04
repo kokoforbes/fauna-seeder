@@ -7,11 +7,11 @@
       >
         Repo Catalogue
       </h1>
-      <div class="columns is-multiline has-text-centered">
+      <div class="columns is-multiline has-text-centered is-centered">
         <div
           v-for="repo in repos"
           :key="repo.projectName"
-          class="card column is-3 mb-5"
+          class="card column is-3 mb-5 mr-5"
         >
           <div
             :style="{ backgroundColor: '#' + repo.colorHex }"
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style>
-.card {
+/* .card {
   margin: 1.5rem;
-}
+} */
 </style>
