@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:repo-catalogue": "npm --prefix repo-catalogue run build",
+    "generate:repo-catalogue": "npm --prefix repo-catalogue run generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
